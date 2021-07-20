@@ -5,7 +5,7 @@
     <h1>{{ message }}</h1>
     <div v-for="movie in movies" :key="movie.id">
       <h2>Title: {{ movie.title }}</h2>
-      <h2>Plot: {{ movie.plot }}</h2>
+      <p>Plot: {{ movie.plot }}</p>
     </div>
   </div>
 </template>
