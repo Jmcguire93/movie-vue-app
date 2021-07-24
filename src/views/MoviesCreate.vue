@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="MoviesCreate">
     <h2>Add a movie</h2>
     Title:
     <input type="text" v-model="newMovieParams.title" />
