@@ -46,6 +46,7 @@ export default {
       movies: [],
       newMovieParams: {},
       currentMovie: {},
+      errors: [],
     };
   },
   created: function () {
@@ -60,12 +61,7 @@ export default {
     },
     createMovie: function () {
       console.log("Adding movie..");
-      // var params = {
-      //   title: "School of Rock",
-      //   year: 2003,
-      //   plot: "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his bar band and finds himself in desperate need of work. Posing as a substitute music teacher at an elite private elementary school, he exposes his students to the hard rock gods he idolizes and emulates -- much to the consternation of the uptight principal (Joan Cusack). As he gets his privileged and precocious charges in touch with their inner rock 'n' roll animals, he imagines redemption at a local Battle of the Bands.",
-      //   director: "Richard Linklater",
-      // };
+
       axios
         .post("http://localhost:3000/movies", this.newMovieParams)
         .then((response) => {
