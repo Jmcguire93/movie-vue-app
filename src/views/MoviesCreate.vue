@@ -1,20 +1,34 @@
 <template>
-  <div class="MoviesCreate">
-    <h2>Add a movie</h2>
-    Title:
-    <input type="text" v-model="newMovieParams.title" />
-    Year:
-    <input type="text" v-model="newMovieParams.year" />
-    Plot:
-    <input type="text" v-model="newMovieParams.plot" />
-    Director:
-    <input type="text" v-model="newMovieParams.director" />
-    English:
-    <input type="text" v-model="newMovieParams.english" />
-    <button v-on:click="createMovie()">Create Movie</button>
+  <div>
+    <form v-on:submit.prevent="addMovie()">
+      <h1>Add a Movie</h1>
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+      </ul>
+      <div>
+        <label>Title:</label>
+        <input type="text" v-model="newMovieParams.title" />
+      </div>
+      <div>
+        <label>Year:</label>
+        <input type="text" v-model="newMovieParams.year" />
+      </div>
+      <div>
+        <label>Director:</label>
+        <input type="text" v-model="newMovieParams.director" />
+      </div>
+      <div>
+        <label>Plot:</label>
+        <input type="text" v-model="newMovieParams.plot" />
+      </div>
+      <div>
+        <label>English?:</label>
+        <input type="checkbox" value="true" v-model="newMovieParams.english" />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 
