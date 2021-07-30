@@ -31,7 +31,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newUserParams: {},
+      newUserParams: { name: "", password: "", password_confirmation: "" },
       errors: [],
     };
   },
