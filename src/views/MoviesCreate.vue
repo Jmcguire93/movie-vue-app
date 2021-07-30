@@ -8,6 +8,7 @@
       <div>
         <label>Title:</label>
         <input type="text" v-model="newMovieParams.title" />
+        <!-- <small>{{ 20 - newMovieParams.title.length }} characters remaining</small> -->
       </div>
       <div>
         <label>Year:</label>
@@ -20,6 +21,7 @@
       <div>
         <label>Plot:</label>
         <input type="text" v-model="newMovieParams.plot" />
+        <small>{{ 300 - newMovieParams.plot.length }} characters remaining</small>
       </div>
       <div>
         <label>English?:</label>
